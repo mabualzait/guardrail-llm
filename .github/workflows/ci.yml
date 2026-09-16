@@ -1,0 +1,48 @@
+name: CI & Build Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test & Build (Python ${{ matrix.python-version }} on ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install Build & Test Dependencies
+        run: |
+          python -m pip install --upgrade pip build wheel
+          python -m pip install -e ".[dev]"
+
+      - name: Verify Python Compilation & Bytecode Syntax
+        run: |
+          python -m compileall -q guardrail/ tests/ benchmarks/
+
+      - name: Build Source Distribution & Binary Wheel
+        run: |
+          python -m build
+
+      - name: Run Pytest Test Suite with Coverage
+        run: |
+          pytest -v --cov=guardrail --cov-report=term-missing --cov-fail-under=85
+
+      - name: Verify Sub-Millisecond Latency Benchmark
+        run: |
+          python benchmarks/benchmark_latency.py

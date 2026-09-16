@@ -3,6 +3,7 @@
 > **Lightweight, zero-bloat, high-performance LLM Guardrails Proxy and SDK.**  
 > Built for teams replacing heavy, bloated frameworks with a sub-millisecond transparent middleware layer.
 
+[![CI](https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml/badge.svg)](https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml)
 [![Tests](https://img.shields.io/badge/tests-41%20passed-brightgreen.svg)](#)
 [![Coverage](https://img.shields.io/badge/coverage-88%25-brightgreen.svg)](#)
 [![Overhead](https://img.shields.io/badge/latency%20overhead-%3C0.05ms-blue.svg)](#)
