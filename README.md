@@ -48,7 +48,7 @@ graph LR
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-org/guardrail-llm.git
+git clone https://github.com/mabualzait/guardrail-llm.git
 cd guardrail-llm
 pip install -e .
 ```
@@ -217,14 +217,19 @@ python benchmarks/benchmark_latency.py
 
 ---
 
-## 🧪 Running Tests
+## 👨‍💻 Author & Maintainer
 
-```bash
-pytest -v --cov=guardrail --cov-report=term-missing
-```
+**`guardrail-llm`** was architected and built by **[Malik Abualzait](https://github.com/mabualzait)**.
+
+- **Author:** Malik Abualzait
+- **GitHub:** [@mabualzait](https://github.com/mabualzait)
+- **Project:** [github.com/mabualzait/guardrail-llm](https://github.com/mabualzait/guardrail-llm)
+
+If you find `guardrail-llm` useful in production or research, please star the repository on GitHub!
 
 ---
 
 ## 📄 License
 
-MIT © 2026 guardrail-llm contributors.
+MIT © 2026 **Malik Abualzait**. See [`LICENSE`](LICENSE) for complete terms.
+

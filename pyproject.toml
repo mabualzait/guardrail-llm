@@ -9,8 +9,8 @@ description = "Lightweight, zero-bloat LLM guardrails reverse proxy and Python S
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "guardrail-llm team" }]
-keywords = ["llm", "guardrails", "proxy", "pii", "schema", "rate-limiting", "ollama", "vllm", "openai"]
+authors = [{ name = "Malik Abualzait", email = "m.abualzait@gmail.com" }]
+keywords = ["llm", "guardrails", "proxy", "pii", "schema", "rate-limiting", "ollama", "vllm", "openai", "malik-abualzait"]
 dependencies = [
     "fastapi>=0.100.0",
     "uvicorn[standard]>=0.23.0",
