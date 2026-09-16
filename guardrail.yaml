@@ -1,0 +1,45 @@
+# guardrail-llm Configuration
+server:
+  host: "0.0.0.0"
+  port: 8080
+  workers: 1
+  timeout: 60.0
+
+upstream:
+  base_url: "http://localhost:11434/v1"  # Default: local Ollama; can also be vLLM (http://localhost:8000/v1) or OpenAI
+  timeout: 60.0
+  headers: {}
+
+pii:
+  enabled: true
+  patterns:
+    - email
+    - phone
+    - credit_card
+    - ipv4
+    - ssn
+    - api_key
+  custom_patterns: {}
+  # If true, the proxy restores original sensitive values in the final LLM response.
+  # If false, tokens remain redacted everywhere.
+  reversible: true
+
+schema:
+  enabled: false
+  strict_json: false
+  repair_malformed: true
+  max_repair_retries: 1
+  on_failure: "retry"  # "retry" or "error"
+  # Target JSON schema (optional, validated if provided)
+  schema: null
+
+budget:
+  enabled: true
+  max_tokens_per_request: 4096
+  max_requests_per_minute: 60
+  max_tokens_per_minute: 100000
+  sliding_window_seconds: 60
+  reject_status_code: 429
+
+metrics:
+  enabled: true
