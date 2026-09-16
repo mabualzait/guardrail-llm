@@ -1,13 +1,25 @@
-# `guardrail-llm` 🛡️⚡
+<p align="center">
+  <img src="assets/banner.png" alt="guardrail-llm Banner" width="100%" />
+</p>
 
-> **Lightweight, zero-bloat, high-performance LLM Guardrails Proxy and SDK.**  
-> Built for teams replacing heavy, bloated frameworks with a sub-millisecond transparent middleware layer.
+<p align="center">
+  <img src="assets/logo.png" alt="guardrail-llm Logo" width="100" height="100" />
+</p>
 
-[![CI](https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml/badge.svg)](https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml)
-[![Tests](https://img.shields.io/badge/tests-41%20passed-brightgreen.svg)](#)
-[![Coverage](https://img.shields.io/badge/coverage-88%25-brightgreen.svg)](#)
-[![Overhead](https://img.shields.io/badge/latency%20overhead-%3C0.05ms-blue.svg)](#)
-[![License](https://img.shields.io/badge/license-MIT-purple.svg)](#)
+<h1 align="center">guardrail-llm 🛡️⚡</h1>
+
+<p align="center">
+  <strong>Lightweight, zero-bloat, high-performance LLM Guardrails Proxy & Python SDK.</strong><br>
+  Built for teams replacing heavy, bloated frameworks with a sub-millisecond transparent middleware layer.
+</p>
+
+<p align="center">
+  <a href="https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml"><img src="https://github.com/mabualzait/guardrail-llm/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <img src="https://img.shields.io/badge/tests-41%20passed-brightgreen.svg" alt="Tests" />
+  <img src="https://img.shields.io/badge/coverage-88%25-brightgreen.svg" alt="Coverage" />
+  <img src="https://img.shields.io/badge/latency%20overhead-%3C0.05ms-blue.svg" alt="Overhead" />
+  <img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License" />
+</p>
 
 ---
 
